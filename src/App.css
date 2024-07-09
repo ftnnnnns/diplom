@@ -1,0 +1,619 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 240px;
+  /* Увеличиваем высоту логотипа */
+  width: 390px;
+  /* Автоматический расчет ширины для сохранения пропорций */
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.learn-more-button {
+  background-color: rgba(77, 86, 108, 0.5);
+  color: white;
+  border: none;
+  padding: 40px 80px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 185px;
+  height: 280px;
+  display: inline-block;
+  
+  text-align: center; /* Центрирование текста */
+  text-decoration: none;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; 
+  margin-right: 20px;
+  margin-left: 20px;/* Отступ сверху */
+}
+
+.image-wrapper {
+  text-align: center;
+  width: 30%; /* Ширина каждого контейнера */
+  background-color: #95a3c0; /* Цвет фона */
+  border-radius: 10px; /* Закругленные края */
+}
+
+.image-wrapper img {
+  width: 100%; /* Растягиваем изображение на всю ширину контейнера */
+  height: auto; /* Автоматическая высота для поддержки пропорций */
+  border-radius: 10px; /* Закругленные края */
+}
+
+.learn-more-button:hover {
+  background-color: #193b60;
+}
+.learn-more-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:rgba(77, 86, 108, 0.5);
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 25px;
+  margin-top: 10px; /* Добавим немного отступа сверху для разделения кнопок */
+}
+
+.learn-more-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+.image-with-text-block {
+  position: relative;
+  text-align: center;
+  background-color: #95a3c0;
+  /* Центрирование содержимого */
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 2px solid #000;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: flex-end;
+  /* Выравнивание по правому краю */
+}
+
+.footer-links p {
+  margin-left: 20px;
+  /* Добавляем отступ слева, чтобы текст не был прижат к правому краю */
+  font-size: 18px;
+  color: #ffffff;
+
+  text-transform: uppercase;
+}
+
+.image-with-text-block img {
+  height: 300px;
+  /* Новая высота изображения */
+  width: auto;
+  /* Автоматический расчет ширины для сохранения пропорций */
+  display: inline-block;
+  background-color: #95a3c0;
+  /* Для правильного позиционирования */
+  margin-top: 20px;
+}
+.testimonials-section {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* Равномерно распределяем контейнеры отзывов по горизонтали */
+  align-items: flex-start;
+  /* Выравниваем контейнеры отзывов по верхнему краю */
+}
+.itap {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* Равномерно распределяем контейнеры отзывов по горизонтали */
+  align-items: flex-start;
+  /* Выравниваем контейнеры отзывов по верхнему краю */
+}
+
+.testimonial {
+  width: 29%;
+  /* Ширина контейнера отзыва */
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  /* Контейнер отзыва становится колонкой */
+  align-items: center;
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  /* Отступ между изображением и текстом */
+}
+.image-with-text-block p {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #95a3c0;
+  color: #ffffff;
+  /* Изменили цвет текста на белый */
+  padding: 15px;
+  /* Увеличили отступы для текста */
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  /* Выравниваем текст по центру */
+  font-family: Arial, sans-serif;
+  /* Изменили шрифт на Arial или другой шрифт */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  /* Добавили тень для текста */
+  transition: background-color 0.3s;
+  /* Добавили плавное изменение цвета фона при наведении */
+}
+
+.image-with-text-block p:hover {
+  background-color: #7289da;
+  /* Изменяем цвет фона при наведении курсора */
+}
+.request-section {
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  background-color: #95a3c0;
+  padding:  20px;
+  border-radius: 10px;
+  
+  color: #ffffff; /* Белый цвет текста */
+}
+.modal {
+  display: none; /* Скрыть модальное окно по умолчанию */
+  position: fixed; /* Фиксированное позиционирование */
+  z-index: 1; /* Положение окна над остальными элементами */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Добавить прокрутку, если содержимое не помещается */
+  background-color: rgba(0,0,0,0.4); /* Цвет фона */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.request-form {
+  display: inline-block;
+  text-align: left;
+  max-width: 400px; /* Примерное значение ширины блока формы */
+  width: 100%;
+}
+
+.request-form label,
+.request-form input,
+.request-form textarea {
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 5px; /* Скругленные углы */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Тень */
+  color: #000000; /* Белый цвет текста */
+   /* Преобразование текста в заглавные буквы */
+  font-size: 18px; /* Увеличенный размер текста */
+}
+
+.request-form textarea {
+  height: 100px;
+  width: 100%;
+  resize: vertical; /* Позволяет изменять высоту textarea только по вертикали */
+}
+
+.request-form button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.request-form button:hover {
+  background-color: #2980b9;
+}
+
+
+
+
+.App-link {
+  color: #61dafb;
+  
+}
+.testimonials-section {
+  text-align: center;
+}
+
+.testimonial {
+  display: inline-block;
+  margin: 20px;
+}
+
+
+.testimonial img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+  border: 6px solid #7289da;
+  /* Пример рамки толщиной 2 пикселя и черного цвета */
+}
+
+
+.App-header {
+  background-color: #4d566c;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #434c4e;
+  /* Добавляем рамку снизу шапки профиля */
+}
+
+.App-title {
+  margin: 0;
+  color: #000000;
+  font-size: 44px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+  font-size: 44px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff; /* Белый цвет текста */
+  font-size: 20px;
+  text-transform: uppercase; /* Преобразование текста в заглавные буквы */
+  font-weight: bold; /* Жирный шрифт */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень текста */
+}
+
+
+.company-block {
+  background-color: #ffffff;
+  
+  display: flex;
+  padding: 20px;
+  height: 100%;
+}
+
+.company-info {
+  flex: 1;
+  text-align: right;
+}
+
+.company-photo {
+  flex: 0;
+  height: 240px;
+      /* Увеличиваем высоту логотипа */
+  width: auto;
+      /* Автоматический расчет ширины для сохранения пропорций */
+  pointer-events: none;
+  border-radius: 30px;
+}
+.footer {
+  background-color: #4d566c;
+  color: white;
+  padding: 20px;
+  border: 2px solid #000;
+}
+.projects-section {
+  background-color:#4d566c;
+  padding: 20px;
+  text-align: center;
+  flex-direction: row-reverse;
+}
+
+.projects-section h2 {
+  margin-top: 0;
+  color: white;
+  font-size: 24px;
+  
+}
+
+
+.project {
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color:#A0AECD;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  display: flex;
+  
+  width: 98%;
+  height: inherit;
+  
+  /* Поменять порядок элементов на обратный */
+}
+.project-content {
+  display: flex;
+}
+
+.project-details {
+  flex: 1;
+  padding: 0 20px;
+}
+
+
+.project img {
+  width: 400px;
+  /* Настройте ширину изображения по вашему усмотрению */
+  height: auto;
+  margin-left: 10px;
+  /* Добавлено для отступа между изображением и текстом */
+}
+
+.project-title {
+  color: #ffffff;
+  /* Цвет текста */
+  font-size: 19px;
+  /* Размер шрифта */
+  font-weight: bold;
+  /* Жирный шрифт */
+  line-height: 1.5;
+  /* Межстрочный интервал */
+  text-align: center;
+  /* Выравнивание текста по центру */
+  margin-top: 10px;
+  /* Верхний отступ для текста */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Тень текста */
+}
+.project-description {
+  color: #333333;
+  /* Цвет текста */
+  font-size: 19px;
+  /* Размер шрифта */
+  line-height: 1.5;
+  /* Межстрочный интервал */
+  text-align: justify;
+  /* Выравнивание текста по ширине */
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.itap-description {
+  color: #ffffff;
+  /* Цвет текста */
+  font-size: 20px;
+  /* Размер шрифта */
+  line-height: 1.5;
+  /* Межстрочный интервал */
+  text-align: center;
+  /* Выравнивание текста по ширине */
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: rgba(184, 203, 255, 0.462);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.project:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ravitie {
+  color: #ffffff; /* Цвет текста */
+  font-size: 25px; /* Размер шрифта */
+  font-weight: bold; /* Жирный шрифт */
+  line-height: 1.5; /* Межстрочный интервал */
+  text-align: left; /* Выравнивание текста по левому краю */
+  margin-top: 10px; /* Верхний отступ для текста */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень текста */
+}
+
+
+
+.contact-info {
+  text-align: left;
+}
+
+.contact-info h3 {
+  margin-top: 0;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.company-info h2 {
+  font-size: 54px;
+  margin: 0;
+  text-align:left;
+  color: rgb(255, 255, 255);
+  
+}
+.company-info .company-details {
+
+    font-size: 25px;
+    color: #1b2231;
+    /* Темно-синий цвет текста */
+    text-align: left;
+    line-height: 1.6;
+    /* Межстрочный интервал */
+    font-family: 'Helvetica Neue', sans-serif;
+    /* Шрифт */
+    width: calc(100% );
+    /* Увеличиваем ширину текста на 15 сантиметров */
+    font-weight: 400;
+    /* Нормальное начертание */
+  }
+
+.inner-block {
+  background-color: #A0AECD;
+    /* Цвет фона с прозрачностью 50% */;
+  /* Цвет фона внутреннего блока */
+  padding: 20px;
+  width: 100%;
+  /* Отступы внутри внутреннего блока */
+  display: flex;
+  /* Располагаем содержимое внутреннего блока в строку */
+  align-items: center;
+  /* Выравниваем содержимое внутреннего блока по вертикали */
+}
+
+.company-info {
+  flex: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень текста */
+}
+
+.company-photo {
+  flex: 1;
+  height: auto;
+  max-width: auto;
+  /* Оставляем пространство для изображения */
+}
+.services-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.service {
+  text-align: center;
+  width: 30%; /* Ширина блока с услугой */
+  padding: 20px;
+  border: 1px solid #ccc; /* Обводка блока */
+  border-radius: 8px; /* Скругление углов */
+}
+
+.service img {
+  width: 100%;
+  border-radius: 8px; /* Скругление углов у изображения */
+}
+
+.service h3 {
+  margin-top: 0;
+}
+
+.service p {
+  margin-bottom: 10px;
+  text-align: justify;
+   font-size: 16px;
+}
+
+
+
+.service .price {
+  font-weight: bold; /* Жирный шрифт */
+  color: #6291c0; /* Синий цвет текста цены */
+  font-size: 36px; /* Размер шрифта */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень текста */
+  -webkit-text-stroke-width: 1px; /* Ширина обводки текста */
+  -webkit-text-stroke-color: #19097d; /* Цвет обводки текста (белый) */
+}
+
+
+
+.history {
+  color: #333; /* Черный или темный цвет текста для контраста */
+  font-family: Arial, sans-serif; /* Шрифт */
+  font-size: 25px; /* Размер шрифта */
+  line-height: 1.6; /* Межстрочный интервал */
+  padding: 20px; /* Отступы вокруг текста */
+}
+
+
+.company-photo-image {
+  max-width: 50%;
+  /* Устанавливаем максимальную ширину изображения */
+  height: auto;
+  
+  /* Поддерживаем пропорции изображения */
+}
+.gorod {
+  margin-top: 10;
+  margin-left: 10;
+  margin-right: 10;
+  margin-bottom: 10;
+  max-width: 100%;
+  /* Устанавливаем максимальную ширину изображения */
+  height: auto;
+  justify-content: center;
+  
+  /* Поддерживаем пропорции изображения */
+}
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.company-photo-image2 {
+  margin-top: 100;
+  margin-left: 10;
+  margin-right: 10;
+  margin-bottom: 10;
+  max-width: 4000px;
+  /* Устанавливаем максимальную ширину изображения */
+  height: auto;
+  justify-content: center;
+}
